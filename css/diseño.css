@@ -1,0 +1,266 @@
+/* SI O SI */
+:root {
+    --fuenteHeading: "Ubuntu", sans-serif;
+    --fuenteParrafos: 'PT Serif', sans-serif;
+
+    --primario: #c00d60;
+    --secundario: #98eb1bef;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --headerTexto: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* convierte 1rem a 10px */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* GLOBALES */
+
+.contenedor {
+    max-width: 120rem; /* TAMAÑO EN UNA PANTALLA QUE TOMARA */
+    width: 90%;/* 90% ASI EN DISPOSITIVOS HABRA UN ESPACIO EN LOS BORDES */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* UTILIDADES */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/* Header */
+
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 80rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.degradado {
+    background-color: rgba(0, 0, 0, .7);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.header__texto {
+    color: var(--headerTexto);
+    font-size: 3rem;
+    margin-top: 10rem;
+    font-family: var(--fuenteHeading);
+    padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 20rem;
+    }
+    .header-titulo {
+        font-size: 5rem;
+        font-weight: 1400;
+    }
+    
+    .header-descripcion {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+} 
+
+.barra {
+    font-family: var(--fuenteHeading);
+    padding-top: 4rem;  
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+} 
+
+
+
+.logotipo__texto {
+    color: var(--headerTexto);
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 4rem;
+    }
+} 
+
+.navegacion__enlaces {
+    display: block;
+    color: var(--headerTexto);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* .Catalogo */
+
+.muestra__imagen {
+    width: 30rem;
+    margin-top: 5rem;
+}
+
+/* AREAS */
+
+.principal {
+    /* grid de 2cx5r */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-areas: 
+    "bismutol" "lavado"
+    "panadol" "mayores"
+    "paracetamol" "arterial"
+    "ibuprofeno" "rcp"
+    "migralivia" "empaquetar";
+    background-color: blue;
+    column-gap: 3rem;
+}
+
+.bismutol {
+    grid-area: bismutol;
+    background-color: red; 
+}
+
+.panadol {
+    grid-area: panadol;
+    background-color: green;
+}
+
+.paracetamol {
+    grid-area: paracetamol;
+}
+
+.ibuprofeno {
+    grid-area: ibuprofeno;
+}
+
+.migralivia {
+    grid-area: migralivia;
+}
+
+.lavado {
+    grid-area: lavado;
+    background-color: yellow;
+}
+
+.mayores {
+    grid-area: mayores;
+}
+
+.arterial {
+    grid-area: arterial;
+}
+
+.rcp {
+    grid-area: rcp;
+}
+
+.empaquetar {
+    grid-area: empaquetar;
+}
+
+/* BOTONES */
+
+.boton {
+    color: var(--blanco);
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.boton--inicial {
+    background-color: var(--primario);
+}
+
+/* ASIDE */
+
+.cursos {
+    list-style: none;
+}
+
+.lista {
+    margin-bottom: 3rem;
+}
+
+.lista__label {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.lista__info {
+    font-weight: 400;
+}
+
+.lista__imagen {
+    width: 40rem;
+    height: 16rem;
+}
+
+.boton--secundario {
+    background-color: var(--secundario);
+}
